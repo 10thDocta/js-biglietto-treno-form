@@ -12,24 +12,18 @@ const calcPriceBtn = document.getElementById("calcPrice_Btn");
 const resetBtn = document.getElementById("reset_Btn");
 
 // funzione per il reset
-const reset = (numb = 0) => {
+const reset = numb => {
+
+  tableName.innerHTML = "";
+  tableDiscount.innerHTML = "";
+  tableCarriage.innerHTML = "";
+  tableCP.innerHTML = "";
+  tablePrice.innerHTML = "";
+  hide.className = "hide";
+  hideTest.className = "hide";
+
   // num = 1 è arriva solo da calcPrice
-  if (numb == 1) {
-    tableName.innerHTML = "";
-    tableDiscount.innerHTML = "";
-    tableCarriage.innerHTML = "";
-    tableCP.innerHTML = "";
-    tablePrice.innerHTML = "";
-    hide.className = "hide";
-    hideTest.className = "hide";
-  } else {
-    tableName.innerHTML = "";
-    tableDiscount.innerHTML = "";
-    tableCarriage.innerHTML = "";
-    tableCP.innerHTML = "";
-    tablePrice.innerHTML = "";
-    hide.className = "hide";
-    hideTest.className = "hide";
+  if (numb != 1) {
     document.getElementById("name").value = "";
     document.getElementById("km").value = "";
   }
