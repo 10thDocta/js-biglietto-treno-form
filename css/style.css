@@ -56,9 +56,14 @@ label {
   font-weight: 500;
 }
 
+input,
+select {
+  border: 1px solid rgb(171, 15, 45);
+  border-radius: 5px;
+}
+
 input {
   text-align: center;
-  color: rgb(171, 15, 45);
   transition: background-color 0.3s;
 }
 
@@ -67,10 +72,6 @@ select:focus {
   color: #000;
   background-color: rgba(171, 15, 45, 0.6);
   font-weight: 500;
-}
-
-option:hover {
-  background-color: gold;
 }
 
 /* .input__btn */
@@ -100,7 +101,7 @@ option:hover {
 
 /* ticket  */
 .ticket {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .ticket h2 {
@@ -115,23 +116,36 @@ option:hover {
 table {
   width: 100%;
   border-spacing: 0;
+  text-align: left;
 }
 
 table th {
+  padding-left: 15px;
   height: 80px;
+  width: 17.5%;
+  font-size: 22px;
+}
+
+table td {
+  padding-left: 16px;
+  height: 140px;
   width: 17.5%;
   font-size: 20px;
 }
 
-table td {
-  height: 140px;
-  width: 17.5%;
-}
-
-table th:first-child,
+th:first-child,
 td:first-child {
   width: 30%;
   background-color: grey;
   font-size: 22px;
   font-weight: 700;
+}
+
+td:first-child {
+  position: relative;
+}
+
+span#table_name {
+  position: absolute;
+  top: 0px;
 }
