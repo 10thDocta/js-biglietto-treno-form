@@ -1,72 +1,137 @@
-/* reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .container {
   max-width: 1170px;
   margin: auto;
   text-align: center;
 }
 
+.hide {
+  display: none;
+}
+
 /* color */
 .red {
-  background-color: rgb(171, 15, 45)
+  color: rgb(171, 15, 45);
 }
 
-.green {
-  background-color: rgb(4, 104, 99)
-}
+/* .green {
+  background-color: rgb(4, 104, 99);
+} */
 
-/* HEADER */
-header {
-  width: 90%;
-  margin: 10px auto;
-  height: 200px;
-  transition: transform .5s ease-out;
-  display: flex;
-  position: relative;
-}
-
-header:active {
-  transform: scale(.9);
-}
-
-.par {
-  width: 50%;
-  height: 200px;
-  transform: skew(-20deg);
-  display: inline-block;
-  box-shadow: 8px 10px 5px -5px rgba(222, 222, 222, 1);
-}
-
-h1 {
-  color: white;
-  text-transform: uppercase;
-  font-size: 40px;
-  font-weight: 900;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* BODY  */
+body {
+  background-color: rgb(171, 15, 45);
+  font-family: "Roboto", sans-serif;
 }
 
 /* MAIN */
+.title {
+  color: #fff;
+  margin-top: 20px;
+}
+
 section {
-  color: white;
-  margin: 30px;
-  padding: 7px;
+  background-color: white;
+  margin: 10px 50px;
+  padding: 10px;
   border-radius: 5px;
-  box-shadow: 7px 10px 5px 1px rgba(222, 222, 222, 1);
-  transition: transform .3s;
+  box-shadow: 3px 4px 1px 1px rgb(179, 179, 179);
 }
 
-section:hover {
-  transform: scale(1.1);
+/* imput__form */
+.input__form {
+  display: flex;
+  justify-content: center;
 }
 
-.big {
-  font-size: 36px;
+.form {
+  width: 15%;
+  margin: 15px 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+input {
+  text-align: center;
+  color: rgb(171, 15, 45);
+  transition: background-color 0.3s;
+}
+
+input:focus,
+select:focus {
+  color: #000;
+  background-color: rgba(171, 15, 45, 0.6);
+  font-weight: 500;
+}
+
+option:hover {
+  background-color: gold;
+}
+
+/* .input__btn */
+.input__btn {
+  margin-top: 15px;
+}
+
+.input__btn > a {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 10px;
+  height: 25px;
+  width: 80px;
+  line-height: 25px;
+  color: rgb(171, 15, 45);
+  background-color: rgb(168, 168, 168);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.5s, font-weight 0.3s;
+}
+
+.input__btn > a:hover {
+  background-color: rgb(4, 104, 99);
+  color: #fff;
+  font-weight: 700;
+}
+
+/* ticket  */
+.ticket {
+  margin-top: 60px;
+}
+
+.ticket h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.ticket h4 {
+  text-align: left;
+  margin-bottom: 5px;
+}
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+table th {
+  height: 80px;
+  width: 17.5%;
+  font-size: 20px;
+}
+
+table td {
+  height: 140px;
+  width: 17.5%;
+}
+
+table th:first-child,
+td:first-child {
+  width: 30%;
+  background-color: grey;
+  font-size: 22px;
+  font-weight: 700;
 }

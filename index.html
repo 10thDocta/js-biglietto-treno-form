@@ -4,41 +4,82 @@
 <head>
   <meta charset="utf-8">
   <title>Trenitalia Biglietti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <header>
-    <div class="par red"></div>
-    <div class="par green"></div>
-    <h1>Calcolo biglietto treno</h1>
-  </header>
-
   <main>
     <div class="container">
+      <div class="title">
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+      </div>
 
-      <section class="chilometri red">
-        <h4>Chilometri da percorrere?</h4>
-        <h2 id="km"></h2>
-      </section>
+      <!-- sezione imput -->
+      <section class="input">
+        <div class="input__form">
+          <div class="form">
+            <label class="red" for="name">Nome Cognome</label>
+            <input type="text" name="name" id="name" placeholder="Nome e Cognome">
+          </div>
+          <div class="form">
+            <label class="red" for="km">Km da percorrere</label>
+            <input type="number" name="km" id="km" min="1" placeholder="Km">
+          </div>
+          <div class="form">
+            <label class="red" for="age">Fascia d'età</label>
+            <select name="age" id="age">
+              <option value="minorenne">Minorenne</option>
+              <option value="maggiorenne">Maggiorenne</option>
+              <option value="over65">Over 65</option>
+            </select>
+          </div>
+        </div>
 
-      <section class="età red">
-        <h4>Qual è la tua età?</h4>
-        <h2 id="age"></h2>
+        <div class="input__btn">
+          <a id="calcPrice_Btn" href="#">Genera</a>
+          <a id="reset_Btn" href="#">Annulla</a>
+        </div>
       </section>
+      <!-- /sezione imput -->
 
-      <section class="sconto red">
-        <h4>Sconto a te riservato:</h4>
-        <h2 id="discount"></h2>
-      </section>
+      <!-- sezione ticket -->
+      <div id="hide" class="hide">
+        <div class="ticket">
+          <h2>IL TUO BIGLIETTO</h2>
+          <section>
+            <h4>DETTAGLIO PASSEGGERI</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th>NOME PASSEGGERO</th>
+                  <th>Offerta</th>
+                  <th>Carrozza</th>
+                  <th>Codice CP</th>
+                  <th>Costo biglietto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="table_name"></td>
+                  <td id="table_discount"></td>
+                  <td id="table_carriage"></td>
+                  <td id="table_cp"></td>
+                  <td id="table_price"></td>
+                </tr>
+              </tbody>
 
-      <section class="prezzo green">
-        <h4>Il prezzo del biglietto è:</h4>
-        <h2 id="price" class="big"></h2>
-      </section>
+            </table>
+          </section>
+        </div>
+      </div>
+      <!-- /sezione ticket -->
+
 
     </div>
+    <!-- /container -->
   </main>
 
   <script src="js/script.js" charset="utf-8"></script>
